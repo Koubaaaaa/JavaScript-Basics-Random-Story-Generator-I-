@@ -122,3 +122,92 @@ In JavaScript kun je op twee manieren opmerkingen (comments) toevoegen aan je co
 > ```
 
 Opmerkingen helpen je om je code beter te begrijpen en te onderhouden.
+
+# 🎲 Random Story Generator: Deel 1
+
+In deze handleiding leer je hoe je een dynamische website maakt die een verhaal toont met willekeurige elementen. Dit project gebruikt **HTML, CSS en JavaScript** om een willekeurig gegenereerd verhaal te maken.
+
+---
+
+## 🏗 Stap 1: Basis HTML-structuur
+
+Maak een eenvoudig HTML-bestand en voeg een `span`-element toe waarin het weer dynamisch wordt aangepast.
+
+> 📜 **HTML-bestand (`index.html`)**
+> ```html
+> <!DOCTYPE html>
+> <html lang="nl">
+> <head>
+>     <meta charset="UTF-8">
+>     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+>     <title>Random Story Generator</title>
+>     <link rel="stylesheet" href="style.css">
+> </head>
+> <body>
+>     <h1>📖 Mijn Random Verhaal</h1>
+>     <p>On a <span id="weer">sunny</span> monday.</p>
+>     <script src="script.js"></script>
+> </body>
+> </html>
+> ```
+
+📌 Dit stukje HTML bevat een zin met een variabele `<span id="weer"></span>` die later met JavaScript wordt aangepast.
+
+---
+
+## 🎭 Stap 2: JavaScript voor willekeurige woorden
+
+Nu voegen we JavaScript toe om het weer in het verhaal willekeurig te veranderen bij elke herlaad van de pagina.
+
+> 🎮 **JavaScript-bestand (`script.js`)**
+> ```javascript
+> document.addEventListener("DOMContentLoaded", function () {
+>     // Lijst met mogelijke weertypes
+>     let randomWordsWeer = ["sunny", "rainy", "misty", "hot", "cold", "dark"];
+>
+>     // Kies een willekeurig woord uit de lijst
+>     let chosenWordWeer = Math.floor(Math.random() * randomWordsWeer.length);
+>
+>     // Vervang het weer in de HTML
+>     document.getElementById("weer").innerHTML = randomWordsWeer[chosenWordWeer];
+> });
+> ```
+
+📌 Deze code kiest een willekeurig woord uit de lijst en plaatst het in het `<span>`-element.
+
+---
+
+## 🎨 Stap 3: Styling met CSS
+
+We maken de pagina aantrekkelijk met **CSS**. Dit bestand zorgt voor een mooi lettertype, kleuren en centrering.
+
+> 🎨 **CSS-bestand (`style.css`)**
+> ```css
+> body {
+>     font-family: 'Arial', sans-serif;
+>     text-align: center;
+>     background-color: #f4f4f4;
+>     color: #333;
+>     margin: 50px;
+> }
+>
+> h1 {
+>     color: #ff6600;
+> }
+>
+> span {
+>     font-weight: bold;
+>     color: #007bff;
+> }
+> ```
+
+📌 De **achtergrondkleur** is lichtgrijs, de **titel is oranje** en het **willekeurige woord krijgt een blauwe kleur**.
+
+---
+
+## ✅ Resultaat
+
+Elke keer dat je de pagina ververst, verandert het verhaal automatisch! 🎉  
+
+Wil je meer dynamiek toevoegen? Experimenteer met extra woorden of voeg personages toe met dezelfde methode.
+
