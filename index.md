@@ -8,7 +8,7 @@ Deze eenvoudige webpagina toont een willekeurig woord uit een vooraf gedefinieer
 
 1. HTML-structuur
 
-<!doctype html>
+`<!doctype html>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -21,11 +21,11 @@ Deze eenvoudige webpagina toont een willekeurig woord uit een vooraf gedefinieer
     <p>Mohamed is <mark id="randomTekst"></mark>.</p>
     <script src="script.js"></script>
   </body>
-</html>
+</html>`
 
 2. JavaScript-functionaliteit
 
-document.addEventListener("DOMContentLoaded", function() {
+`document.addEventListener("DOMContentLoaded", function() {
     // Array Lijst met willekeurige woorden
     let randomWoorden = ["geweldig", "cool", "de beste", "fantastisch", "uitzonderlijk", "indrukwekkend"];
 
@@ -34,5 +34,5 @@ document.addEventListener("DOMContentLoaded", function() {
     
     // Voeg het gekozen woord toe aan de HTML-tag met id = "randomTekst"
     document.getElementById("randomTekst").innerHTML = randomWoorden[gekozenWoord];
-});
+});`
 
